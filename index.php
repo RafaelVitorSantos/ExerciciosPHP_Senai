@@ -18,7 +18,7 @@
         <div class="grid-content">
             <?php
             for ($i = 1; $i <= 20; $i++) {
-                echo 'numero é ' . $i . "<br>";
+                echo '<span> numero é ' . $i . ' </span>';
             }
             ?>
         </div>
@@ -303,18 +303,18 @@
                 if (isset($_POST['num01-12'])) {
                     $num01 = $_POST['num01-12'];
                     $num01 = ($num01 * 16) / 100;
-
-                    echo '<table>';
+                    echo '<br /> <br />';
+                    echo '<center>' . '<table style="border: 1px solid #eee; border-collapse: collapse;">';
                     for ($i = 0; $i < 10; $i++) {
                         echo '<tr>';
                         for ($d = 1; $d < 2; $d++) {
-                            echo '<td>';
+                            echo '<td style="border: 1px solid #eee; border-collapse: collapse;">';
                             echo $i + $d . ' Parcelas ' . ' ' . $num01 / 10;
                             echo '</td>';
                         }
                         echo '</tr>';
                     }
-                    echo '</table>';
+                    echo '</table>' . '</center>';
                 }
                 ?>
             </form>
@@ -325,15 +325,17 @@
         <div class="grid-content-3">
             <form method="post">
                 <?php
-                $a = 80000;
-                $b = 200000;
-                $cont = 0;
-                while($a >= $b){
-                    $a+=(($a*3)/100);
-                    $b+=(($b*1.5)/100);
-                    $cont++;
-                }
-                echo 'contador: ' . $cont;
+                    $a = 80000;
+                    $b = 200000;
+                    $cont = 0;
+                    do{
+                        $a+=(($a*3)/100);
+                        $b+=(($b*1.5)/100);
+                        $cont++;
+                    }while($a < $b);
+                    echo 'contador: ' . $cont . '<br />';
+                    echo 'A: ' . $a . '<br />';
+                    echo 'B: ' . $b;
                 ?>
             </form>
         </div>

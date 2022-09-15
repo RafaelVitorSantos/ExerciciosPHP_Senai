@@ -13,7 +13,7 @@ body {
     border: 1px solid #eee;
     padding: 5%;
     width: 75%;
-    height: 350px;
+    height: 400px;
     margin: 5%;
     display: grid;
     justify-items: center;
@@ -23,17 +23,19 @@ body {
     border: 1px solid #eee;
     padding: 5%;
     width: 75%;
-    height: 350px;
+    height: 400px;
     margin: 5%;
+    display: grid;
+    justify-items: center;
 }
 
 .grid-content-3 {
     border: 1px solid #eee;
     padding: 5%;
     width: 75%;
-    height: 350px;
+    height: 400px;
     margin: 5%;
-    display: flex;
+    display: grid;
     justify-content: center;
     justify-items: center;
 }
@@ -57,6 +59,12 @@ h1,
 h2,
 h3 {
     text-align: center;
+}
+
+span{
+    margin: 0;
+    padding: 0;
+    font-size: 5px;
 }
 
 @media (max-width: 700px) {
